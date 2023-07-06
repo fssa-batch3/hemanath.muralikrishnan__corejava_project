@@ -1,0 +1,8 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.fssa.corejava</groupId>
+  <artifactId>hemanath-mvn-core-java</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>hemanath.muralikrishnan__corejava_project</name>
+  <description>My first core java project</description>
+</project>
