@@ -1,22 +1,23 @@
 package day04.practice;
 
-public class RightAngleTriangle extends Polygon {
+public class RightAngleTriangle extends Rectangle {
 
 	protected double height;
 	protected double base;
 	protected double hypo;
 
 	public RightAngleTriangle(double height, double base) throws Exception {
-		super(3);
+		super(10, 5);
 		if (height <= 0 || base <= 0) {
 			throw new Exception("Invalid dimensions for a right angle triangle");
 		}
 		this.height = height;
 		this.base = base;
+		
 	}
 
 	public RightAngleTriangle(double height, double base, double hypo) throws Exception {
-		super(3);
+		super(10, 5);
 		if (height <= 0 || base <= 0 || hypo <= 0) {
 			throw new Exception("Invalid dimensions for a right angle triangle");
 		}
