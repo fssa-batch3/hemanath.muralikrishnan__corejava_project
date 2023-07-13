@@ -14,15 +14,21 @@ public class AddTask {
 		// create a scanner object to read user input
 		Scanner scanner = new Scanner(System.in);
 
-		try {
+		try { 
 
 			// prompt the user to enter the task name
 			System.out.println("Enter the task name: ");
 			String taskName = scanner.nextLine();
+			
+//			validate the task name
+			AddTaskValidator.ValidateTaskName(taskName);
 
 			// prompt the user to enter the task priority
 			System.out.println("Enter the task priority: ");
 			int priority = scanner.nextInt();
+			
+//			validate the task priority
+			AddTaskValidator.ValidatePriority(priority);
 
 			// create a new task object and add it to the array list
 			TaskDetails task = new TaskDetails(taskName, priority);
@@ -34,7 +40,7 @@ public class AddTask {
 			}
 
 		} catch (InputMismatchException e) {
-			
+	
 			System.out.println(e.getMessage());
 
 		} catch (IllegalArgumentException ex) {

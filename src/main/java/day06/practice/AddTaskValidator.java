@@ -8,13 +8,13 @@ public class AddTaskValidator {
 	public static boolean ValidateTaskName(String name) throws IllegalArgumentException {
 
 //		if the string null or empty throw an exception
-		if ("".equals(name.trim()) || name == null) {
+		if (name == null || "".equals(name.trim())) {
 
 			throw new IllegalArgumentException("Taskname cannot be null or empty");
 		}
 
 //		task name must contains alphabets
-		String pattern = "^[a-zA-Z ]{1,50}$";
+		String pattern = "^[a-zA-Z ]{1,50}$"; 
 
 		Boolean isMatch = Pattern.matches(pattern, name);
 
