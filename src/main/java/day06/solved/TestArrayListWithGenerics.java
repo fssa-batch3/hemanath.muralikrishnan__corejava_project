@@ -1,6 +1,7 @@
 package day06.solved;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TestArrayListWithGenerics {
  
@@ -16,6 +17,7 @@ public class TestArrayListWithGenerics {
         for (String cityName : cityList) {           
             System.out.println(cityName);           
         }
+        
  
     }
  
