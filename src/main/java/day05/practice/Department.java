@@ -34,9 +34,9 @@ public class Department {
 		this.deptId = deptId;
 	}
 	
-	public String toString() {
+	public void printDeptDetails() {
 		
-		return  "Department Name = " + deptName + " , Department Id = "+ deptId;
+		System.out.println("Dept Name = " + this.deptName + " , Dept Id = " + this.deptId);
 	}
 
 }

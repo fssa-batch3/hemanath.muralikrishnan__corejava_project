@@ -45,9 +45,9 @@ public class Student {
 		this.department = department;
 	}
 
-	public String toString() {
-
-		return "Student Name = " + name + " , id = " + id;
+	public void printStuDetails() {
+		
+		System.out.println("Student Name = " + this.name + " , id = " + this.id);
+		this.department.printDeptDetails();
 	}
-
 }

@@ -13,7 +13,7 @@ public class TestSudentDept {
 		stu1.setId(100);
 		stu1.setDepartment(stu1Dept);
 		
-		System.out.println(stu1);
+		stu1.printStuDetails();
 
 	}
 }
