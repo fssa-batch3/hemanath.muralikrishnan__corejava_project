@@ -55,7 +55,9 @@ public class RemoveDuplicatesTest {
 //	testing the array list with size zero
 	@Test(expected = IllegalArgumentException.class)
 	public void testRemoveDuplicatesWithZeroSize() throws Exception {
+		
 		List<String> cityList = new ArrayList<>();
+		
 		RemoveDuplicates.removeDuplicates(cityList);
 
 	}
