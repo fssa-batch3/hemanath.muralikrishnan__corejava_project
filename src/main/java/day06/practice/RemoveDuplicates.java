@@ -13,7 +13,7 @@ public class RemoveDuplicates {
 
 			throw new IllegalArgumentException("City list cannot be null or empty");
 		}
-
+ 
 //		creating new array list to store the unique city names 
 
 		ArrayList<String> newList = new ArrayList<String>();

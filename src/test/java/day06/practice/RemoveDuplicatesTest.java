@@ -16,7 +16,7 @@ public class RemoveDuplicatesTest {
 		List<String> cityList = new ArrayList<>();
 		cityList.add("Chennai");
 		cityList.add("Bangalore"); 
-		cityList.add("Mumbai");
+		cityList.add("Mumbai"); 
 		cityList.add("Mumbai"); 
 
 		List<String> expectedList = new ArrayList<>();

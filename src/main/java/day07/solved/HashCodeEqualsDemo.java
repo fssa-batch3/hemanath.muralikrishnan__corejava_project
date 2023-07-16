@@ -15,7 +15,7 @@ class Employee {
 	public Employee(int id) {
 		this.id = id;
 	}
-
+ 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -63,9 +63,9 @@ public class HashCodeEqualsDemo {
         HashSet<Employee> setOfEmps = new HashSet<>();
         setOfEmps.add(emp1);
         setOfEmps.add(emp2);
- 
+  
         for (Employee emp : setOfEmps) {
-            System.out.println(emp);
+            System.out.println(emp.id);
         }
  
         System.out.println("HashSet size:" + setOfEmps.size());
