@@ -1,7 +1,6 @@
 package day08.practice;
 
 import static org.junit.Assert.*;
-import java.util.HashSet;
 import org.junit.Test;
 import java.util.Map;
 import java.util.HashMap;

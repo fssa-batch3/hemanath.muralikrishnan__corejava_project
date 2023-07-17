@@ -1,9 +1,6 @@
 package day08.practice;
 
 import java.util.regex.Pattern;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
 
 public class ValidateDepartMentEmployee {
 
@@ -38,7 +35,9 @@ public class ValidateDepartMentEmployee {
 //	method will split the inputs return the array
 	public static String[] splitInput(String s) throws IllegalArgumentException {
 
+//		checking empty or null
 		ValidadteString(s);
+//		checking matching the regex pattern
 		validateRegex(s.trim(), "^\\w+,\\s*\\w+$");
 
 		String[] str = s.split(",");
