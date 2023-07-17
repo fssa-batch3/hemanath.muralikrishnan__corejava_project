@@ -9,9 +9,9 @@ import org.junit.Test;
 public class RemoveDuplicatesTest {
 
 //	testing with valid inputs
-
+ 
 	@Test
-	public void testRemoveDuplicatesWithDuplicates() throws Exception {
+	public void testRemoveDuplicatesWithDuplicates() {
 
 		List<String> cityList = new ArrayList<>();
 		cityList.add("Chennai");

@@ -17,7 +17,7 @@ public class RemoveDuplicates {
 //		creating new array list to store the unique city names 
 
 		ArrayList<String> newList = new ArrayList<String>();
-
+ 
 		for (String element : cityList) {
 
 			if (!newList.contains(element)) {

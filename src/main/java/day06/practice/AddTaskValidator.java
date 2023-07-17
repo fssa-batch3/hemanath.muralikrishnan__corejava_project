@@ -2,7 +2,7 @@ package day06.practice;
 
 import java.util.regex.Pattern;
 
-public class AddTaskValidator {
+public class AddTaskValidator { 
 
 //	validate the string is not equal to null or empty
 	public static boolean ValidateTaskName(String name) throws IllegalArgumentException {
