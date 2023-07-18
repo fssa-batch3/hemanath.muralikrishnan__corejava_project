@@ -14,7 +14,7 @@ public class DepartmentEmployee {
 
 //		using while loop to get input from the user until the user type done and end the inputs prompt
 //		initiliazing new hash map with key has string and values as list
-		HashMap<String, List<String>> departmentMap = new HashMap<>();
+		TreeMap<String, List<String>> departmentMap = new TreeMap<>();
 
 		try {
 
@@ -24,7 +24,7 @@ public class DepartmentEmployee {
 				System.out.print("Enter input: ");
 				String input = scanner.nextLine();
 
-//				when the user type done the input prompt will end the print the hashmpa
+//				when the user type done the input prompt will end the print the hashmap
 				if (input.equalsIgnoreCase("done")) {
 					break;
 				}
@@ -32,8 +32,8 @@ public class DepartmentEmployee {
 //				calling the method to validate the string and split it using comma
 				String[] arr = ValidateDepartMentEmployee.splitInput(input);
 
-				String departmentName = arr[0].trim();
-				String employeeName = arr[1].trim();
+				String departmentName = arr[0].trim(); // HR
+				String employeeName = arr[1].trim(); // Hemanath
 
 //				validate the nullity of the both string
 				ValidateDepartMentEmployee.ValidadteString(departmentName);
@@ -67,7 +67,19 @@ public class DepartmentEmployee {
 //		printing the each department employee name with depart name
 		for (String departmentName : departmentMap.keySet()) {
 
-			System.out.println(departmentName + ": " + departmentMap.get(departmentName));
+			List<String> sortedArr = departmentMap.get(departmentName);
+
+			Collections.sort(sortedArr); // Sort the ArrayList in place
+
+			System.out.print(departmentName + ": ");
+
+//			iterating through the sorted arraylist
+			for (String item : sortedArr) {
+
+				System.out.print(item + " ");
+			}
+
+			System.out.println();
 		}
 
 		scanner.close();
