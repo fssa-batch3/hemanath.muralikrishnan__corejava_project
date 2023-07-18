@@ -20,7 +20,7 @@ public class SortInteger {
 
 			String s = scanner.nextLine();
 			ValidateSortNumbers.ValidadteString(s);
-			ValidateSortNumbers.validateRegex(s, "\\d+(?: \\d+)*");
+			ValidateSortNumbers.validateRegex(s, "\\d+(?: \\d+)*"); 
 
 //			calling the method to sort the given integer
 			ArrayList<Integer> arr = ValidateSortNumbers.sortNumbers(s.trim());
