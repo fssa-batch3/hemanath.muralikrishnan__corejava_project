@@ -1,6 +1,5 @@
 package day06.practice;
-
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,15 +8,15 @@ import org.junit.Test;
 public class RemoveDuplicatesTest {
 
 //	testing with valid inputs
- 
+
 	@Test
 	public void testRemoveDuplicatesWithDuplicates() {
 
 		List<String> cityList = new ArrayList<>();
 		cityList.add("Chennai");
-		cityList.add("Bangalore"); 
-		cityList.add("Mumbai"); 
-		cityList.add("Mumbai"); 
+		cityList.add("Bangalore");
+		cityList.add("Mumbai");
+		cityList.add("Mumbai");
 
 		List<String> expectedList = new ArrayList<>();
 		expectedList.add("Chennai");
@@ -26,7 +25,7 @@ public class RemoveDuplicatesTest {
 
 		List<String> actualList = RemoveDuplicates.removeDuplicates(cityList);
 
-		assertEquals(expectedList, actualList);
+		assertIterableEquals(expectedList, actualList);
 	}
 
 //    testing without duplicate values
@@ -55,9 +54,9 @@ public class RemoveDuplicatesTest {
 //	testing the array list with size zero
 	@Test(expected = IllegalArgumentException.class)
 	public void testRemoveDuplicatesWithZeroSize() throws Exception {
-		
+
 		List<String> cityList = new ArrayList<>();
-		
+
 		RemoveDuplicates.removeDuplicates(cityList);
 
 	}

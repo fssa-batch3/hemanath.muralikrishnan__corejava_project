@@ -56,7 +56,7 @@ public class ComparatorDemo {
 
 		System.out.println("Sorting by age");
 
-		Collections.sort(al, new AgeComparator());
+		
 		// Getting an Iterator for the List
 		// Another way to iterate instead of foreach
 		Iterator<Student> itr2 = al.iterator();
@@ -67,12 +67,14 @@ public class ComparatorDemo {
 
 		System.out.println("Sorting by Name");
 
-		Collections.sort(al, new NameComparator());
+		
 		Iterator<Student> itr = al.iterator();
 		while (itr.hasNext()) {
 			Student st = itr.next();
 			System.out.println(st.rollno + " " + st.name + " " + st.age);
 		}
-
+		
+		Collections.sort(al, new AgeComparator());
+		Collections.sort(al, new NameComparator());	
 	}
 }

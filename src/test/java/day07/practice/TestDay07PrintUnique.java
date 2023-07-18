@@ -1,6 +1,6 @@
 package day07.practice;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import org.junit.Test;
@@ -32,7 +32,7 @@ public class TestDay07PrintUnique {
 
 //		checking the acutal set and expected set is equal
 
-		assertEquals(actualSet, expectedSet);
+		assertIterableEquals(actualSet, expectedSet);
 
 	}
 

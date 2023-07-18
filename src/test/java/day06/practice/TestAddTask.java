@@ -1,6 +1,6 @@
 package day06.practice;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Test;
 

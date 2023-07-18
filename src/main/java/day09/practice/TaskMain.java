@@ -2,12 +2,16 @@ package day09.practice;
 
 import java.util.*;
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 public class TaskMain {
 
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
+
+//		initiliazing a arraylist to store the tasks
+		ArrayList<Task> taskList = new ArrayList<>();
 
 //		using try and catch to handle the unexpected beahvior
 
@@ -26,16 +30,23 @@ public class TaskMain {
 				if (input.equalsIgnoreCase("done")) {
 					break;
 				}
-				
+
 //				calling the method to validate the user input
-				
+				String[] arr = ValidateTask.validateInput(input);
+
+				int taskId = Integer.parseInt(arr[0].trim());
+				String taskName = arr[1].trim();
+				String deadDate = arr[2].trim();
+
+//				parsing the string has the local date
+
+				DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+				LocalDate deadLineDate = LocalDate.parse(deadDate, dateFormatter);
+
+//				adding the tasks to the task list array list
+				taskList.add(new Task(taskId, taskName, deadLineDate));
 
 			}
-
-		} catch (InputMismatchException e) {
-
-//			catching the error message and printing it here
-			System.out.println(e.getMessage());
 
 		} catch (IllegalArgumentException ex) {
 
@@ -43,21 +54,7 @@ public class TaskMain {
 			System.out.println(ex.getMessage());
 		}
 
-//		creating five task using task blue print
-		Task task1 = new Task(1, "CPR Metting", LocalDate.of(2023, 02, 13));
-		Task task2 = new Task(2, "Face prep class", LocalDate.of(2023, 07, 11));
-		Task task3 = new Task(3, "Hacker rank test", LocalDate.of(2023, 07, 17));
-		Task task4 = new Task(4, "Holiday assignment", LocalDate.of(2023, 07, 15));
-		Task task5 = new Task(5, "Hacker rank test", LocalDate.of(2023, 07, 05));
-
-//		creating new array list to sort the task by comparing the date of task
-		ArrayList<Task> taskList = new ArrayList<>();
-		taskList.add(task1);
-		taskList.add(task2);
-		taskList.add(task3);
-		taskList.add(task4);
-		taskList.add(task5);
-
+//		sorting the tasklist using date and printing it
 		Collections.sort(taskList);
 
 		for (Task ele : taskList) {

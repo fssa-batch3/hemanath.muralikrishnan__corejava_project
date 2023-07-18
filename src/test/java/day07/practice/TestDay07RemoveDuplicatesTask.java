@@ -1,6 +1,6 @@
 package day07.practice;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -39,7 +39,7 @@ public class TestDay07RemoveDuplicatesTask {
 		HashSet<Task> actualSet = RemoveDuplicatesTask.taskRemove(TaskList);
 
 //		checking the expected and actual set are equal
-		assertEquals(expectedSet, actualSet);
+		assertIterableEquals(expectedSet, actualSet);
 
 	}
 
