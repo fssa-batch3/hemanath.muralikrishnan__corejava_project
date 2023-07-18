@@ -28,7 +28,7 @@ public class ValidateDepartMentEmployee {
 			throw new IllegalArgumentException("Inputs doesn't match the requested format");
 		}
 
-//		if there is no exception then returnt true
+//		if there is no exception then return true
 		return true;
 	}
 
@@ -38,7 +38,7 @@ public class ValidateDepartMentEmployee {
 //		checking empty or null
 		ValidadteString(s);
 //		checking matching the regex pattern
-		validateRegex(s.trim(), "^\\w+,\\s*\\w+$");
+		validateRegex(s.trim(), "^[A-Za-z]+,\\s*[A-Za-z]+\\s+[A-Za-z]+$");
 
 		String[] str = s.split(",");
 
