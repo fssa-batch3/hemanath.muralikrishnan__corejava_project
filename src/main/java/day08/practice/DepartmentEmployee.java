@@ -32,8 +32,8 @@ public class DepartmentEmployee {
 //				calling the method to validate the string and split it using comma
 				String[] arr = ValidateDepartMentEmployee.splitInput(input);
 
-				String departmentName = arr[0].trim(); // HR
-				String employeeName = arr[1].trim(); // Hemanath
+				String departmentName = arr[0].trim();
+				String employeeName = arr[1].trim();
 
 //				validate the nullity of the both string
 				ValidateDepartMentEmployee.ValidadteString(departmentName);
@@ -48,7 +48,7 @@ public class DepartmentEmployee {
 
 					departmentMap.put(departmentName, new ArrayList<String>());
 				}
-//				each time in the dept map using the dept name the employee name will be added
+//				each time in the dept map using the dept name to add the employee name
 
 				departmentMap.get(departmentName).add(employeeName);
 
