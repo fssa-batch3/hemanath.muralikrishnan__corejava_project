@@ -4,11 +4,11 @@ package day10.misc;
 
 public class CheckedException {
 
-	public static int divide(int a, int b) throws Exception {
+	public static int divide(int a, int b) throws IllegalArgumentException {
 
 		if (b == 0) {
 
-			throw new Exception("Divisor can't be zero");
+			throw new IllegalArgumentException("Divisor can't be zero");
 		}
 
 		return a / b;
