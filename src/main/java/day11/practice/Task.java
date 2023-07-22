@@ -42,5 +42,10 @@ public class Task {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
+	public String toString() {
+		
+		return "[ task_id = " + id + ", task_name = " + name + " , task_status = " + status  + " ]";
+	}
 
 }
