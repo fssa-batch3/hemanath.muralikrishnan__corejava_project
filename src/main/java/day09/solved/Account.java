@@ -40,15 +40,25 @@ public class Account implements Comparable<Account> {
 	@Override
 	public int compareTo(Account o) {
 
-		if (balance == o.getBalance()) {
-			return 0;
+//		if (balance == o.getBalance()) {
+//			return 0;
+//		} else {
+//			if (this.balance < o.getBalance()) {
+//				return 1;
+//			} else {
+//				return -1;
+//			}
+//			// return ( this.balance > o.getBalance()) ? 1: -1;
+//		}
+
+		if (o.getBalance() > this.balance) {
+			return -1;
+		} else if (o.getBalance() < this.balance) {
+
+			return 1;
 		} else {
-			if (this.balance < o.getBalance()) {
-				return 1;
-			} else {
-				return -1;
-			}
-			// return ( this.balance > o.getBalance()) ? 1: -1;
+
+			return 0;
 		}
 	}
 

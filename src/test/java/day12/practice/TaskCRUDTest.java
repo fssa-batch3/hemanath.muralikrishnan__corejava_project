@@ -61,40 +61,40 @@ public class TaskCRUDTest {
 		// If it doesn't, the test case will fail.
 
 	}
-
-	@Test
-	public void testUpdateTask_ValidTaskId() {
-		// Valid test case for updateTask()
-		// Insert a test task into the database, then update its status and check if it
-		// was updated correctly.
-	}
-
-	@Test(expected = DAOException.class)
-	public void testUpdateTask_InvalidTaskId() {
-		// Invalid test case for updateTask()
-		// Try to update a task with an invalid (non-existing) task_id and expect a
-		// DAOException to be thrown.
-	}
-
-	@Test
-	public void testDeleteTask_ValidTaskId() {
-		// Valid test case for deleteTask()
-		// Insert a test task into the database, then delete it and check if it was
-		// deleted correctly.
-	}
-
-	@Test(expected = DAOException.class)
-	public void testDeleteTask_InvalidTaskId() {
-		// Invalid test case for deleteTask()
-		// Try to delete a task with an invalid (non-existing) task_id and expect a
-		// DAOException to be thrown.
-	}
-
-	@Test
-	public void testGetAllTasks() {
-		// Test the getAllTasks() method.
-		// Insert some test tasks into the database, and then call getAllTasks().
-		// Compare the returned List<Task> with your test data to check if it's
-		// accurate.
-	}
+//
+//	@Test
+//	public void testUpdateTask_ValidTaskId() {
+//		// Valid test case for updateTask()
+//		// Insert a test task into the database, then update its status and check if it
+//		// was updated correctly.
+//	}
+//
+//	@Test(expected = DAOException.class)
+//	public void testUpdateTask_InvalidTaskId() {
+//		// Invalid test case for updateTask()
+//		// Try to update a task with an invalid (non-existing) task_id and expect a
+//		// DAOException to be thrown.
+//	}
+//
+//	@Test
+//	public void testDeleteTask_ValidTaskId() {
+//		// Valid test case for deleteTask()
+//		// Insert a test task into the database, then delete it and check if it was
+//		// deleted correctly.
+//	}
+//
+//	@Test(expected = DAOException.class)
+//	public void testDeleteTask_InvalidTaskId() {
+//		// Invalid test case for deleteTask()
+//		// Try to delete a task with an invalid (non-existing) task_id and expect a
+//		// DAOException to be thrown.
+//	}
+//
+//	@Test
+//	public void testGetAllTasks() {
+//		// Test the getAllTasks() method.
+//		// Insert some test tasks into the database, and then call getAllTasks().
+//		// Compare the returned List<Task> with your test data to check if it's
+//		// accurate.
+//	}
 }

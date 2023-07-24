@@ -25,6 +25,9 @@ class Student {
  */
 class AgeComparator implements Comparator<Student> {
 	public int compare(Student s1, Student s2) {
+		System.out.println(s1.age);
+		System.out.println(s2.age);
+		System.out.println("**************");
 		if (s1.age == s2.age)
 			return 0;
 		else if (s1.age > s2.age)
@@ -39,6 +42,9 @@ class AgeComparator implements Comparator<Student> {
  */
 class NameComparator implements Comparator<Student> {
 	public int compare(Student s1, Student s2) {
+		System.out.println(s1.name);
+		System.out.println(s2.name);
+		System.out.println("**************");
 		return s1.name.compareTo(s2.name);
 	}
 }
@@ -56,7 +62,8 @@ public class ComparatorDemo {
 
 		System.out.println("Sorting by age");
 
-		
+		Collections.sort(al, new AgeComparator());
+
 		// Getting an Iterator for the List
 		// Another way to iterate instead of foreach
 		Iterator<Student> itr2 = al.iterator();
@@ -66,15 +73,13 @@ public class ComparatorDemo {
 		}
 
 		System.out.println("Sorting by Name");
+		Collections.sort(al, new NameComparator());
 
-		
 		Iterator<Student> itr = al.iterator();
 		while (itr.hasNext()) {
 			Student st = itr.next();
 			System.out.println(st.rollno + " " + st.name + " " + st.age);
 		}
-		
-		Collections.sort(al, new AgeComparator());
-		Collections.sort(al, new NameComparator());	
+
 	}
 }

@@ -1,6 +1,7 @@
 package day06.solved;
 
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ConvertArrayToList {
@@ -11,7 +12,8 @@ public class ConvertArrayToList {
 		deptNames[0] = "CSE";
 		deptNames[1] = "EEE";
 		deptNames[2] = "MECH";
-		List<String> list = Arrays.asList(deptNames);
+		List<String> list = new ArrayList<>(Arrays.asList(deptNames));
+		list.add("ECE");
 		System.out.println(list);
 	}
 }
